@@ -1,0 +1,23 @@
+export LANG="en_US.UTF-8"
+
+# export PATH="/usr/local/bin:${PATH}"
+path=("/usr/local/bin" $path)
+path+=($(brew --prefix pandoc)/bin)
+path+=("/usr/local/anaconda3/bin")
+
+
+# ----- C# ----- #
+export DOTNET_CLI_TELEMETRY_OPTOUT=1 # Don't send data to MS
+
+# Disable Azure Functions Telemetry
+export FUNCTIONS_CORE_TOOLS_TELEMETRY_OPTOUT=1
+
+# ---- JAVA ---- #
+# export JAVA_HOME="$(/usr/libexec/java_home)" # Path to JDK
+export JAVA_HOME=/usr/local/opt/openjdk
+path+="$JAVA_HOME/bin"
+
+# Maven configuration
+export M2_HOME="/usr/local/Cellar/maven/3.6.2/libexec"
+export M2="${M2_HOME}/bin"
+path=($M2 $path)

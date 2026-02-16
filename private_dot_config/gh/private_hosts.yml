@@ -1,0 +1,5 @@
+github.com:
+    user: christopher-dabrowski
+    git_protocol: ssh
+    users:
+        christopher-dabrowski: {}

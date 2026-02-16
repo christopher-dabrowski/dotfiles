@@ -1,0 +1,22 @@
+[user]
+	name = Christopher Dabrowski
+	email = 19330758+christopher-dabrowski@users.noreply.github.com
+	signingkey = 55697F7E952353D1
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[pull]
+	ff = only
+[core]
+	excludesfile = ~/.gitignore_global
+	autocrlf = input
+[init]
+	defaultBranch = master
+[alias]
+	change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f"
+[commit]
+	gpgsign = true
+[push]
+	autoSetupRemote = true

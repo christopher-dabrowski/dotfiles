@@ -1,0 +1,15 @@
+{{- if eq .chezmoi.os "darwin" -}}
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_rsa
+{{- end -}}
+
+Host raspberrypi.local
+  HostName raspberrypi.local
+  User pi
+
+Host azyl.ag3nts.org
+  HostName azyl.ag3nts.org
+  User agent11895
+  Port 5022
