@@ -1,9 +1,13 @@
 export LANG="en_US.UTF-8"
 
-# export PATH="/usr/local/bin:${PATH}"
-path=("/usr/local/bin" $path)
-path+=($(brew --prefix pandoc)/bin)
-path+=("/usr/local/anaconda3/bin")
+typeset -U path PATH
+
+# Prefer common Homebrew locations without calling `brew` (zshenv runs for every zsh).
+[[ -d "/opt/homebrew/bin" ]] && path=("/opt/homebrew/bin" $path)
+[[ -d "/usr/local/bin" ]] && path=("/usr/local/bin" $path)
+
+# Optional tools
+[[ -d "/usr/local/anaconda3/bin" ]] && path+=("/usr/local/anaconda3/bin")
 
 
 # ----- C# ----- #
@@ -14,10 +18,26 @@ export FUNCTIONS_CORE_TOOLS_TELEMETRY_OPTOUT=1
 
 # ---- JAVA ---- #
 # export JAVA_HOME="$(/usr/libexec/java_home)" # Path to JDK
-export JAVA_HOME=/usr/local/opt/openjdk
-path+="$JAVA_HOME/bin"
+if command -v brew >/dev/null 2>&1; then
+	HOMEBREW_PREFIX="$(brew --prefix)"
+	if [[ -d "$HOMEBREW_PREFIX/opt/openjdk" ]]; then
+		export JAVA_HOME="$HOMEBREW_PREFIX/opt/openjdk"
+		path+=("$JAVA_HOME/bin")
+	fi
+
+	if [[ -d "$HOMEBREW_PREFIX/opt/pandoc/bin" ]]; then
+		path+=("$HOMEBREW_PREFIX/opt/pandoc/bin")
+	fi
+fi
 
 # Maven configuration
-export M2_HOME="/usr/local/Cellar/maven/3.6.2/libexec"
+if command -v brew >/dev/null 2>&1; then
+	HOMEBREW_PREFIX="$(brew --prefix)"
+	if [[ -d "$HOMEBREW_PREFIX/opt/maven/libexec" ]]; then
+		export M2_HOME="$HOMEBREW_PREFIX/opt/maven/libexec"
+	fi
+fi
+
+: ${M2_HOME:="/usr/local/Cellar/maven/3.6.2/libexec"}
 export M2="${M2_HOME}/bin"
-path=($M2 $path)
+[[ -d "$M2" ]] && path=($M2 $path)
