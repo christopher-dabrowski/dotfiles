@@ -84,3 +84,4 @@ packages:
       - xquartz
       - zappy
       - zoom
+      - font-meslo-for-powerlevel10k
