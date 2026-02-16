@@ -42,6 +42,7 @@ packages:
       - zoxide
       - jesseduffield/lazydocker/lazydocker
       - dockutil
+      - thefuck
     casks:
       - anki
       - arduino-ide
