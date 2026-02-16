@@ -41,6 +41,7 @@ packages:
       - yt-dlp
       - zoxide
       - jesseduffield/lazydocker/lazydocker
+      - dockutil
     casks:
       - anki
       - arduino-ide
