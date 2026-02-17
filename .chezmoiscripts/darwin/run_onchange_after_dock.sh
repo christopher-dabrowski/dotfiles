@@ -11,6 +11,9 @@ defaults write com.apple.dock autohide -bool false
 # Don't show recently used applications in the Dock
 defaults write com.Apple.Dock show-recents -bool false
 
+# Set Dock size
+defaults write com.apple.dock tilesize -int 53
+
 dockutil --no-restart --remove all
 dockutil --no-restart --add "/Applications/Brave Browser.app"
 dockutil --no-restart --add "/System/Applications/Utilities/Activity Monitor.app"
