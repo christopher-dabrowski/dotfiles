@@ -2,6 +2,8 @@
 
 set -eufo pipefail
 
+osascript -e 'tell application "System Preferences" to quit'
+
 # Disable Natural Scrolling (Traditional/Reversed)
 defaults write -g com.apple.swipescrolldirection -bool false
 

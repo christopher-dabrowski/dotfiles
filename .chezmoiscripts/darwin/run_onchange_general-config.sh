@@ -2,6 +2,8 @@
 
 set -eufo pipefail
 
+osascript -e 'tell application "System Preferences" to quit'
+
 # Menu bar: show battery percentage
 defaults write com.apple.menuextra.battery ShowPercent YES
 
