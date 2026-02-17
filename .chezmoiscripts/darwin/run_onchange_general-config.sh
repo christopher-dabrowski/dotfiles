@@ -5,7 +5,10 @@ set -eufo pipefail
 osascript -e 'tell application "System Preferences" to quit'
 
 # Menu bar: show battery percentage
-defaults write com.apple.menuextra.battery ShowPercent YES
+defaults -currentHost write com.apple.controlcenter.plist BatteryShowPercentage -bool true
+
+# Prevent clicking the desktop from focussing it
+defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
 
 # Disable the “Are you sure you want to open this application?” dialog
 # defaults write com.apple.LaunchServices LSQuarantine -bool false
