@@ -43,6 +43,7 @@ packages:
       - jesseduffield/lazydocker/lazydocker
       - dockutil
       - thefuck
+      - mas # Mac App Store command-line interface
     casks:
       - anki
       - arduino-ide
