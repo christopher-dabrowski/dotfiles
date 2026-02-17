@@ -10,7 +10,7 @@
 [pull]
 	ff = only
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = ~/.config/git/ignore
 	autocrlf = input
 [init]
 	defaultBranch = master
