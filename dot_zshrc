@@ -40,13 +40,17 @@ fi
 path+=("$HOME/.local/share/nvim/site/")
 
 # Alias for logging in to PW laboratories server
-alias volt="ssh dabrowk1@volt.iem.pw.edu.pl" 
+alias volt="ssh dabrowk1@volt.iem.pw.edu.pl"
 
 # Update all pip3 packages
 alias pip3-upgrade="pip3 list --outdated --format=freeze | cut -d = -f 1 | xargs -n1 pip3 install -U"
 
 # Activate venv
 alias venv-activate="source ./venv/bin/activate"
+
+chezmoi-cd() {
+    cd $(chezmoi source-path)
+}
 
 # Opt out of .Net telemetry
 export DOTNET_INTERACTIVE_CLI_TELEMETRY_OPTOUT=1
@@ -131,7 +135,7 @@ source $ZSH/oh-my-zsh.sh
 
 # zsh parameter completion for the dotnet CLI
 
-_dotnet_zsh_complete() 
+_dotnet_zsh_complete()
 {
   local completions=("$(dotnet complete "$words")")
 
