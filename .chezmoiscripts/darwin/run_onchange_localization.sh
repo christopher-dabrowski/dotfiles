@@ -1,5 +1,7 @@
+#!/bin/bash
+
 # Set language and text formats
-defaults write NSGlobalDomain AppleLanguages -array ("en-PL", "pl-PL")
+defaults write NSGlobalDomain AppleLanguages -array "en-PL" "pl-PL"
 defaults write NSGlobalDomain AppleLocale -string "en_PL"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
