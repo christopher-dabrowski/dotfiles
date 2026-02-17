@@ -1,7 +1,7 @@
 [user]
 	name = Christopher Dabrowski
 	email = 19330758+christopher-dabrowski@users.noreply.github.com
-	signingkey = 55697F7E952353D1
+	signingkey = ~/.ssh/id_rsa.pub
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -23,3 +23,5 @@
 
 [advice]
 	detachedHead = false
+[gpg]
+	format = ssh
