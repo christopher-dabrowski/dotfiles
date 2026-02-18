@@ -163,6 +163,9 @@ bindkey '^[[B' history-substring-search-down
 
 export EDITOR='nvim'
 
+# VS Code terminal integration
+[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
