@@ -20,3 +20,32 @@ link-folders-to-one-drive.sh
 .zprofile
 .zshrc
 {{ end }}
+
+###### For clear output of `chezmoi unamaged` ######
+
+# Not related directories
+Desktop/
+Documents/
+Downloads/
+Library/
+LocalDocuments/
+Movies/
+Music/
+OneDrive/
+OneDrive - Politechnika Warszawska/
+Pictures/
+Public/
+Obsidian/
+
+# .files without any meaningful configuration
+.CFUserTextEncoding
+.DS_Store
+.Trash
+# Adobe cache
+.aitk
+.cache
+.config/chezmoi
+.config/iterm2
+.zcompdump*
+.zsh_history
+.zsh_sessions
