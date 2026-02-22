@@ -17,7 +17,7 @@ defaults write com.apple.dock tilesize -int 53
 dockutil --no-restart --remove all
 dockutil --no-restart --add "/Applications/Brave Browser.app"
 dockutil --no-restart --add "/System/Applications/Utilities/Activity Monitor.app"
-dockutil --no-restart --add "/Applications/iTerm.app"
+dockutil --no-restart --add "/Applications/kitty.app"
 dockutil --no-restart --add "/Applications/Obsidian.app"
 dockutil --no-restart --add "/Applications/Bitwarden.app"
 dockutil --no-restart --add "~/Downloads" --view auto --display stack --sort dateadded
