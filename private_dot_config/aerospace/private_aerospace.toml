@@ -42,7 +42,7 @@ automatically-unhide-macos-hidden-apps = false
 # even when they are invisible.
 # This config version is only available since 'config-version = 2'
 # Fallback value (if you omit the key): persistent-workspaces = []
-persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "B", "D", "E", "F", "G", "I", "M", "N", "O", "P", "Q", "R", "T", "U", "V", "W", "X", "Y", "Z"]
+persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "B", "D", "E", "F", "G", "I", "M", "N", "O", "P", "Q", "R", "T", "U", "V", "W", "X", "Y"]
 
 # A callback that runs every time binding mode changes
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -155,7 +155,7 @@ on-mode-changed = []
   alt-w = 'workspace W'
   alt-x = 'workspace X'
   alt-y = 'workspace Y'
-  alt-z = 'workspace Z'
+  # alt-z = 'workspace Z'
 
   # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
   alt-shift-1 = 'move-node-to-workspace 1'
