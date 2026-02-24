@@ -4,6 +4,9 @@ set -eufo pipefail
 
 osascript -e 'tell application "System Preferences" to quit'
 
+# Disable double space to insert a period
+defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+
 # Prevent clicking the desktop from focussing it
 defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
 
