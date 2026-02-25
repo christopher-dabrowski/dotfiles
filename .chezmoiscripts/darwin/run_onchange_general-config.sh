@@ -10,6 +10,9 @@ defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
 # Prevent clicking the desktop from focussing it
 defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
 
+# Allow dragging a window by holding ctrl+cmd and dragging any part of the window (not necessarily the window title)
+defaults write -g NSWindowShouldDragOnGesture -bool true
+
 # Disable the “Are you sure you want to open this application?” dialog
 # defaults write com.apple.LaunchServices LSQuarantine -bool false
 
