@@ -22,4 +22,7 @@ dockutil --no-restart --add "/Applications/Obsidian.app"
 dockutil --no-restart --add "/Applications/Bitwarden.app"
 dockutil --no-restart --add "~/Downloads" --view auto --display stack --sort dateadded
 
+# Mission Control workaround for Aerospace https://nikitabobko.github.io/AeroSpace/guide#a-note-on-mission-control
+defaults write com.apple.dock expose-group-apps -bool true
+
 killall Dock
