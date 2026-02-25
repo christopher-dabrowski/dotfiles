@@ -44,7 +44,7 @@ automatically-unhide-macos-hidden-apps = true
 # even when they are invisible.
 # This config version is only available since 'config-version = 2'
 # Fallback value (if you omit the key): persistent-workspaces = []
-persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "B", "D", "E", "G", "I", "M", "N", "P", "Q", "R", "T", "U", "V", "W", "Y"]
+persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "B", "C", "D", "E", "G", "I", "M", "N", "P", "Q", "R", "T", "U", "V", "W", "Y"]
 
 # A callback that runs every time binding mode changes
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -138,7 +138,7 @@ on-mode-changed = []
   alt-9 = 'workspace 9'
   # alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
   alt-b = 'workspace B'
-  # alt-c = 'workspace C'
+  # alt-c = 'workspace C' # I'm using BetterTouchTool to map left alt-c only
   alt-d = 'workspace D'
   # alt-e = 'workspace E'
   # alt-f = 'workspace F'
@@ -171,7 +171,7 @@ on-mode-changed = []
   alt-shift-9 = 'move-node-to-workspace 9'
   # alt-shift-a = 'move-node-to-workspace A'
   alt-shift-b = 'move-node-to-workspace B'
-  # alt-shift-c = 'move-node-to-workspace C'
+  alt-shift-c = 'move-node-to-workspace C'
   alt-shift-d = 'move-node-to-workspace D'
   # alt-shift-e = 'move-node-to-workspace E'
   # alt-shift-f = 'move-node-to-workspace F'
