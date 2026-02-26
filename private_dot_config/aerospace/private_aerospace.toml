@@ -228,6 +228,6 @@ on-mode-changed = []
   if.app-id = 'com.brave.Browser'
   run       = ['move-node-to-workspace B']
 
-[[on-window-detected]]
-  if.app-id = 'net.kovidgoyal.kitty'
-  run       = ['move-node-to-workspace T']
+  # [[on-window-detected]]
+  #   if.app-id = 'net.kovidgoyal.kitty'
+  #   run       = ['move-node-to-workspace T']
