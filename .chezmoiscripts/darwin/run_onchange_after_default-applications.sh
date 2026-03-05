@@ -2,6 +2,9 @@
 
 set -eufo pipefail
 
+# Getting id of an app
+# osascript -e 'id of app "Brave Browser"'
+
 # Role: 'all' (everything), 'viewer' (read only), 'editor' (edit), shell (application can execute the item), none
 declare -a MAPPINGS=(
     "com.brave.Browser pdf viewer" # Sets Brave as the default browser for PDF files
