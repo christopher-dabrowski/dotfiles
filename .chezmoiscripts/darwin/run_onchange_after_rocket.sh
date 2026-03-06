@@ -14,7 +14,8 @@ defaults write net.matthewpalmer.Rocket deactivated-website-patterns -array \
   "trello.com" \
   "slack.com" \
   "archidekt.com" \
-  "mpcfill.com"
+  "mpcfill.com" \
+  "scryfall.com"
 
 defaults write net.matthewpalmer.Rocket launch-at-login -bool true
 defaults write net.matthewpalmer.Rocket use-fuzzy-search -bool true
