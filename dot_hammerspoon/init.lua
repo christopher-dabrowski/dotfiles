@@ -45,3 +45,5 @@ spoon.Swipe:start(4, function(direction, distance, id)
         end
     end
 end)
+
+require("wifi_audio")
