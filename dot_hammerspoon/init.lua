@@ -6,13 +6,18 @@
 --   hs.notify.new({title="Hammerspoon", informativeText="Hello World"}):send()
 -- end)
 
+hs.loadSpoon("LeftRightHotkey")
+leftRightHotkey = spoon.LeftRightHotkey
+
 aerospace = "/usr/local/bin/aerospace"
-hs.hotkey.bind({"lalt"}, "l", function()
+leftRightHotkey:bind({"l⌥"}, "l", function()
     os.execute(aerospace .. " focus right")
 end)
-hs.hotkey.bind({"lalt"}, "c", function()
+leftRightHotkey:bind({"l⌥"}, "c", function()
     os.execute(aerospace .. " workspace C")
 end)
-hs.hotkey.bind({"lalt"}, "n", function()
+leftRightHotkey:bind({"l⌥"}, "n", function()
     os.execute(aerospace .. " workspace N")
 end)
+
+leftRightHotkey:start()
