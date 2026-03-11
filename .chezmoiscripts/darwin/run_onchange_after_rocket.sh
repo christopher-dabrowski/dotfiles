@@ -7,7 +7,8 @@ defaults write net.matthewpalmer.Rocket deactivated-apps -array \
     "Xcode" \
     "Terminal" \
     "iTerm2" \
-    "Obsidian"
+    "Obsidian" \
+    "kitty"
 
 defaults write net.matthewpalmer.Rocket deactivated-website-patterns -array \
   "github.com" \
