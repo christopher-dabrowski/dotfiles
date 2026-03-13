@@ -93,6 +93,7 @@ packages:
       - font-meslo-for-powerlevel10k
       - nikitabobko/tap/aerospace
       - hammerspoon
+      - font-meslo-lg-nerd-font
     mas:
       - 937984704 # Amphetamine
       - 1193539993 # Brother iPrint&Scan
