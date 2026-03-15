@@ -25,3 +25,5 @@
 	detachedHead = false
 [gpg]
 	format = ssh
+[fetch]
+	prune = true
