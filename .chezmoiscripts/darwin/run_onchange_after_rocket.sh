@@ -17,7 +17,8 @@ defaults write net.matthewpalmer.Rocket deactivated-website-patterns -array \
   "archidekt.com" \
   "mpcfill.com" \
   "scryfall.com" \
-  "vim-adventures.com"
+  "vim-adventures.com" \
+  "proxxied.com"
 
 defaults write net.matthewpalmer.Rocket launch-at-login -bool true
 defaults write net.matthewpalmer.Rocket use-fuzzy-search -bool true
