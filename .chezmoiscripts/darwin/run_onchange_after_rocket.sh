@@ -8,7 +8,8 @@ defaults write net.matthewpalmer.Rocket deactivated-apps -array \
   "Terminal" \
   "iTerm2" \
   "Obsidian" \
-  "kitty"
+  "kitty" \
+  "Visual Studio Code"
 
 defaults write net.matthewpalmer.Rocket deactivated-website-patterns -array \
   "github.com" \
