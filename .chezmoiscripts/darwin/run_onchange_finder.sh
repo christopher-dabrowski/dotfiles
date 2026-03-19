@@ -33,4 +33,7 @@ defaults write com.apple.finder WarnOnEmptyTrash -bool false
 defaults write com.apple.finder NewWindowTarget -string "PfDo"
 # defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}"
 
+# Search current folder by default
+defaults write "com.apple.finder" "FXDefaultSearchScope" 'SCcf'
+
 killall Finder
