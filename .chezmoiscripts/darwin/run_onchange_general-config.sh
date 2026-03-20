@@ -26,6 +26,9 @@ defaults write -g NSWindowShouldDragOnGesture -bool true
 # Automatically illuminate built-in MacBook keyboard in low light
 defaults write com.apple.BezelServices kDim -bool true
 
+# Disable press and hold keys to imput acent caracters
+defaults write -g ApplePressAndHoldEnabled -bool false
+
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
