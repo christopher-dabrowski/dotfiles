@@ -21,7 +21,7 @@ spoon.Swipe:start(4, function(direction, distance, id)
 
     if distance > swipe_threshold then
         -- Setting the threshold to infinity prevents further triggers within the same gesture
-        swipe_threshold = math.huge 
+        swipe_threshold = math.huge
 
         if direction == "left" then
             os.execute("/usr/local/bin/aerospace focus left")
@@ -33,3 +33,11 @@ spoon.Swipe:start(4, function(direction, distance, id)
 end)
 
 require("wifi_audio")
+
+-- Pause music when screen locks
+screenLockWatcher = hs.caffeinate.watcher.new(function(eventType)
+    if eventType == hs.caffeinate.watcher.screensDidLock then
+        os.execute("/usr/local/bin/nowplaying-cli pause")
+    end
+end)
+screenLockWatcher:start()
