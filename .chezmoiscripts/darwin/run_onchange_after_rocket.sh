@@ -9,7 +9,7 @@ defaults write net.matthewpalmer.Rocket deactivated-apps -array \
   "iTerm2" \
   "Obsidian" \
   "kitty" \
-  "Visual Studio Code"
+  "Code"
 
 defaults write net.matthewpalmer.Rocket deactivated-website-patterns -array \
   "github.com" \
