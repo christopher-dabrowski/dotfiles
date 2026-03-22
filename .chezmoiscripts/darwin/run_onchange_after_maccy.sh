@@ -2,6 +2,9 @@
 
 set -eufo pipefail
 
+# Hide menu icon
+defaults write org.p0deje.Maccy showInStatusBar -bool false
+
 defaults write org.p0deje.Maccy ignoredApps -array "com.bitwarden.desktop"
 defaults write org.p0deje.Maccy pasteByDefault -bool true
 defaults write org.p0deje.Maccy searchMode -string "fuzzy"
