@@ -93,6 +93,7 @@ packages:
       - nikitabobko/tap/aerospace
       - hammerspoon
       - font-meslo-lg-nerd-font
+      - karabiner-elements
     mas:
       - 937984704 # Amphetamine
       - 1193539993 # Brother iPrint&Scan
