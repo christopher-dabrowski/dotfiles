@@ -189,8 +189,8 @@ on-mode-changed = []
   alt-shift-u = 'move-node-to-workspace U'
   alt-shift-v = 'move-node-to-workspace V'
   alt-shift-w = 'move-node-to-workspace W'
-  alt-shift-x = 'move-node-to-workspace X'
-  # alt-shift-y = 'move-node-to-workspace Y'
+  # alt-shift-x = 'move-node-to-workspace X'
+  alt-shift-y = 'move-node-to-workspace Y'
   # alt-shift-z = 'move-node-to-workspace Z'
 
   alt-shift-f = 'fullscreen'
