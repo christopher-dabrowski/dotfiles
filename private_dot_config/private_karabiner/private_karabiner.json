@@ -50,7 +50,7 @@
                         ]
                     },
                     {
-                        "description": "Caps Lock (Hold) -> Left Control (^), Caps Lock (Tap) -> Backspace",
+                        "description": "Caps Lock (Hold) -> Left Control (^), Caps Lock (Tap) -> Escape",
                         "manipulators": [
                             {
                                 "from": {
@@ -58,7 +58,7 @@
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [{ "key_code": "left_control" }],
-                                "to_if_alone": [{ "key_code": "delete_or_backspace" }],
+                                "to_if_alone": [{ "key_code": "escape" }],
                                 "type": "basic"
                             }
                         ]
