@@ -5,9 +5,18 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Map ctrl + [ to escape",
+                        "description": "Map ctrl + [ to escape (Disabled in Obsidian)",
+                        "enabled": false,
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^md\\.obsidian$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "open_bracket",
                                     "modifiers": {
