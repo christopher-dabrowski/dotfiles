@@ -47,6 +47,7 @@ packages:
       - trash-cli
       - duti # Select default apps for documents and URL schemes on macOS
       - ripgrep
+      - r
     casks:
       - anki
       - arduino-ide
