@@ -2,9 +2,10 @@
 --   hs.alert.show("Hello World!")
 -- end)
 
--- hs.hotkey.bind({"cmd", "alt", "ctrl"}, "W", function()
---   hs.notify.new({title="Hammerspoon", informativeText="Hello World"}):send()
--- end)
+hs.hotkey.bind({ "cmd", "alt", "ctrl" }, "W", function()
+	hs.notify.new({ title = "Hammerspoon", informativeText = "Hello World" }):send()
+	hs.notify.new({ title = "Hammerspoon", informativeText = hs.inspect(hs.audiodevice.allOutputDevces()) }):send()
+end)
 
 -- Hide the Hammerspoon icon
 hs.menuIcon(false)
