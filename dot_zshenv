@@ -4,8 +4,11 @@ typeset -U path PATH
 
 export EDITOR=nvim
 export VISUAL=nvim
-export PAGER="nvimpager"
-export MANPAGER="nvimpager"
+
+export NVIMPAGER_INIT_FILE="$HOME/.config/nvim/init.lua"
+export PAGER="nvimpager -- -c 'lua nvimpager.maps = false'"
+
+export MANPAGER='nvim +Man!'
 
 # Default config directory
 export XDG_CONFIG_HOME="$HOME/.config"
