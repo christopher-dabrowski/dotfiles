@@ -164,9 +164,6 @@ compctl -K _pip_completion pip
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-# export EDITOR='code --wait'
-export EDITOR='nvim'
-
 # VS Code terminal integration
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
 
