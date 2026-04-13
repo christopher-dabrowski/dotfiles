@@ -4,6 +4,9 @@ typeset -U path PATH
 
 export EDITOR=nvim
 
+# Default config directory
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # Prefer common Homebrew locations without calling `brew` (zshenv runs for every zsh).
 [[ -d "/opt/homebrew/bin" ]] && path=("/opt/homebrew/bin" $path)
 [[ -d "/usr/local/bin" ]] && path=("/usr/local/bin" $path)
