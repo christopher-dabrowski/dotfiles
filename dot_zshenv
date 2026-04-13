@@ -3,6 +3,7 @@ export LANG="en_US.UTF-8"
 typeset -U path PATH
 
 export EDITOR=nvim
+export VISUAL=nvim
 
 # Default config directory
 export XDG_CONFIG_HOME="$HOME/.config"
