@@ -20,9 +20,6 @@ export GPG_TTY=$(tty)
 export ITERM2_SQUELCH_MARK=1
 [[ -r "$HOME/.iterm2_shell_integration.zsh" ]] && source "$HOME/.iterm2_shell_integration.zsh"
 
-# Use Neovim for dipplaying man pages
-export MANPAGER='nvim +Man!'
-
 # .Net interactive
 path+=("$HOME/.dotnet/tools")
 

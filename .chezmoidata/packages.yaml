@@ -50,6 +50,7 @@ packages:
       - r
       - bat # cat alternative
       - uv # python environment manager
+      - nvimpager
     casks:
       - anki
       - arduino-ide

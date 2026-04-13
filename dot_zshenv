@@ -4,6 +4,8 @@ typeset -U path PATH
 
 export EDITOR=nvim
 export VISUAL=nvim
+export PAGER="nvimpager"
+export MANPAGER="nvimpager"
 
 # Default config directory
 export XDG_CONFIG_HOME="$HOME/.config"
