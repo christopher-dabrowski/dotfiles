@@ -19,4 +19,19 @@ if vim.g.vscode then
   vim.keymap.set("n", "[h", function()
     vscode.action("workbench.action.editor.previousChange")
   end, { desc = "Previous git hunk" })
+
+  -- File Explorer (<leader>e)
+  vim.keymap.set("n", "<leader>e", function()
+    vscode.action("workbench.view.explorer")
+  end, { desc = "Toggle Explorer" })
+
+  -- Find Files (<leader>ff)
+  vim.keymap.set("n", "<leader>ff", function()
+    vscode.action("workbench.action.quickOpen")
+  end, { desc = "Find Files" })
+
+  -- Git View (<leader>gg)
+  vim.keymap.set("n", "<leader>gg", function()
+    vscode.action("workbench.view.scm")
+  end, { desc = "Git View" })
 end
