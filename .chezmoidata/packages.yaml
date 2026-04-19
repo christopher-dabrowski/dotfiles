@@ -51,6 +51,9 @@ packages:
       - bat # cat alternative
       - uv # python environment manager
       - nvimpager
+      - luarocks
+      - rust
+      - mise
     casks:
       - anki
       - arduino-ide

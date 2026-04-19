@@ -265,3 +265,4 @@ fi
 # Enable vi mode on escape
 bindkey -v
 
+eval "$(mise activate zsh)"
