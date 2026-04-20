@@ -1,5 +1,4 @@
 [tools]
 lua = "5.1"
 "npm:eslint" = "latest"
-"npm:neovim" = "latest"
 "npm:prettier" = "latest"
