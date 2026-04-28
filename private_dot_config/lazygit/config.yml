@@ -6,3 +6,5 @@ promptToReturnFromSubprocess: false
 gui:
   nerdFontsVersion: '3'
 
+git:
+  overrideGpg: true
