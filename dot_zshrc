@@ -8,6 +8,9 @@ fi
 # Prefer portable paths (Intel + Apple Silicon) and avoid hard-coding $HOME.
 typeset -U path PATH
 
+# GLOBDOTS lets files beginning with a . be matched without explicitly specifying the dot.
+setopt globdots
+
 HOMEBREW_PREFIX=""
 if command -v brew >/dev/null 2>&1; then
   HOMEBREW_PREFIX="$(brew --prefix)"
