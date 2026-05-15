@@ -85,7 +85,7 @@ packages:
       - obsidian
       - onedrive
       - openmtp
-      - qbittorrent
+      - transmission
       - quarto
       - rocket
       - steam
