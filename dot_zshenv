@@ -1,3 +1,5 @@
+# vim: set filetype=sh:
+
 export LANG="en_US.UTF-8"
 
 typeset -U path PATH
