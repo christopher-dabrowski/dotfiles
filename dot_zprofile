@@ -1,3 +1,5 @@
+# vim: set filetype=sh:
+
 # Added by Toolbox App
 if [[ -d "/usr/local/bin" ]]; then
 	export PATH="$PATH:/usr/local/bin"
