@@ -7,6 +7,10 @@ fi
 echo "Updating Homebrew..."
 brew update
 
+echo "Enabling package trust"
+brew trust --formula jesseduffield/lazydocker/lazydocker
+brew trust --cask nikitabobko/tap/aerospace
+
 echo "Installing brew packages"
 
 brew bundle --file=/dev/stdin <<EOF
