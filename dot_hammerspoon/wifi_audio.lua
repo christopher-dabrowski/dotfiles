@@ -2,6 +2,7 @@ local targetNetworks = {
 	"eduroam",
 	"pw.edu.pl",
 	"Green Caffe Nero",
+	"AU-Guest",
 	-- "2.4G-WorldGateway",
 }
 
@@ -94,4 +95,3 @@ WiFiAudioWatcher:start()
 local AudioDeviceWatcher = hs.audiodevice.watcher
 AudioDeviceWatcher.setCallback(handleStateChange)
 AudioDeviceWatcher.start()
-
