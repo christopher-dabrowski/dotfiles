@@ -34,4 +34,33 @@ if vim.g.vscode then
   vim.keymap.set("n", "<leader>gg", function()
     vscode.action("workbench.view.scm")
   end, { desc = "Git View" })
+
+  ------------------------------------------------
+  -- Window Navigation (<leader>w...)
+  ------------------------------------------------
+
+  -- Focus left window (<leader>wh)
+  vim.keymap.set("n", "<leader>wh", function()
+    vscode.action("workbench.action.navigateLeft")
+  end, { desc = "Focus Left Window" })
+
+  -- Focus lower window (<leader>wj)
+  vim.keymap.set("n", "<leader>wj", function()
+    vscode.action("workbench.action.navigateDown")
+  end, { desc = "Focus Lower Window" })
+
+  -- Focus upper window (<leader>wk)
+  vim.keymap.set("n", "<leader>wk", function()
+    vscode.action("workbench.action.navigateUp")
+  end, { desc = "Focus Upper Window" })
+
+  -- Focus right window (<leader>wl)
+  vim.keymap.set("n", "<leader>wl", function()
+    vscode.action("workbench.action.navigateRight")
+  end, { desc = "Focus Right Window" })
+
+  -- Focus next window group (<leader>ww)
+  vim.keymap.set("n", "<leader>ww", function()
+    vscode.action("workbench.action.focusNextGroup")
+  end, { desc = "Focus Next Window Group" })
 end
