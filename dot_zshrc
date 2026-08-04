@@ -46,6 +46,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
+# LaTeX binaries (MacTeX). These are here instead of in the .zshenv file because otherwise they are overridden
+[[ -d "/Library/TeX/texbin" ]] && path=("/Library/TeX/texbin" $path)
+# or TinyTeX
+# [[ -d "$HOME/Library/TinyTeX/bin/universal-darwin" ]] && path=("$HOME/Library/TinyTeX/bin/universal-darwin" $path)
+
 # Alias for logging in to PW laboratories server
 alias volt="ssh dabrowk1@volt.iem.pw.edu.pl"
 
