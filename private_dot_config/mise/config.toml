@@ -2,3 +2,4 @@
 lua = "5.1"
 "npm:eslint" = "latest"
 "npm:prettier" = "latest"
+"npm:yarn" = "latest"
