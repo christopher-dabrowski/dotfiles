@@ -32,7 +32,6 @@ packages:
       - pandoc
       - pinentry-mac
       - pnpm
-      - podman
       - pstree
       - sl
       - terminal-notifier
