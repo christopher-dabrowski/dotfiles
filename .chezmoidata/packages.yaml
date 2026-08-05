@@ -28,7 +28,6 @@ packages:
       - lazygit
       - neovim
       - nmap
-      - fnm
       - pandoc
       - pinentry-mac
       - pnpm

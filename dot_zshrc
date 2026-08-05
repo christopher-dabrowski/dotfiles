@@ -41,8 +41,6 @@ fi
 # Add nvim site path for plugins
 path+=("$HOME/.local/share/nvim/site/")
 
-eval "$(fnm env --use-on-cd --shell zsh)"
-
 # LaTeX binaries (MacTeX). These are here instead of in the .zshenv file because otherwise they are overridden
 [[ -d "/Library/TeX/texbin" ]] && path=("/Library/TeX/texbin" $path)
 # or TinyTeX
