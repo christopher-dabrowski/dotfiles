@@ -35,6 +35,26 @@ if vim.g.vscode then
     vscode.action("workbench.view.scm")
   end, { desc = "Git View" })
 
+  -- Cllose other editors in group (<leader>bo)
+  vim.keymap.set("n", "<leader>bo", function()
+    vscode.action("workbench.action.closeOtherEditors")
+  end, { desc = "Close Other Editors in Group" })
+
+  -- Close editors in other groups (<leader>wo)
+  vim.keymap.set("n", "<leader>wo", function()
+    vscode.action("workbench.action.closeEditorsInOtherGroups")
+  end, { desc = "Close Editors in Other Groups" })
+
+  -- Split window vertically (<leader>wv)
+  vim.keymap.set("n", "<leader>wv", function()
+    vscode.action("workbench.action.splitEditorRight")
+  end, { desc = "Split Window Vertically" })
+
+  -- Word wrap toggle (<leader>uw)
+  vim.keymap.set("n", "<leader>uw", function()
+    vscode.action("editor.action.toggleWordWrap")
+  end, { desc = "Toggle Word Wrap" })
+
   ------------------------------------------------
   -- Window Navigation (<leader>w...)
   ------------------------------------------------
