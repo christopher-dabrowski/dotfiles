@@ -223,6 +223,11 @@ alt-shift-j = [ 'join-with down', 'mode main' ]
 alt-shift-k = [ 'join-with up', 'mode main' ]
 alt-shift-l = [ 'join-with right', 'mode main' ]
 
+j = 'exec-and-forget /usr/local/bin/hs -c "hs.eventtap.event.newSystemKeyEvent(\"BRIGHTNESS_DOWN\", true):post(); hs.eventtap.event.newSystemKeyEvent(\"BRIGHTNESS_DOWN\", false):post()"'
+k = 'exec-and-forget /usr/local/bin/hs -c "hs.eventtap.event.newSystemKeyEvent(\"BRIGHTNESS_UP\", true):post(); hs.eventtap.event.newSystemKeyEvent(\"BRIGHTNESS_UP\", false):post()"'
+h = 'exec-and-forget /usr/local/bin/hs -c "hs.eventtap.event.newSystemKeyEvent(\"ILLUMINATION_DOWN\", true):post(); hs.eventtap.event.newSystemKeyEvent(\"ILLUMINATION_DOWN\", false):post()"'
+l = 'exec-and-forget /usr/local/bin/hs -c "hs.eventtap.event.newSystemKeyEvent(\"ILLUMINATION_UP\", true):post(); hs.eventtap.event.newSystemKeyEvent(\"ILLUMINATION_UP\", false):post()"'
+
 # Move and close window. A workaround for my my callendar workspace reopening the window
 x = [ 'exec-and-forget $HOME/.config/aerospace/move-and-close-window.sh', 'mode main' ]
 
