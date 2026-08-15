@@ -201,8 +201,6 @@ alt-tab = 'workspace-back-and-forth'
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
-ctrl-cmd-semicolon  = 'mode service'
-shift-cmd-semicolon = 'mode service'
 alt-shift-semicolon = 'mode service'
 
 # 'service' binding mode declaration.
@@ -242,8 +240,6 @@ e = [ 'exec-and-forget open -a Finder ~/Documents', 'mode main' ]
 
 [mode.media.binding]
 esc                 = 'mode main'
-ctrl-cmd-semicolon  = 'mode service'
-shift-cmd-semicolon = 'mode service'
 alt-shift-semicolon = 'mode service'
 
 space = 'exec-and-forget /usr/local/bin/nowplaying-cli togglePlayPause'
