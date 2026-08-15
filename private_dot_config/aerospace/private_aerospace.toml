@@ -223,15 +223,6 @@ alt-shift-j = [ 'join-with down', 'mode main' ]
 alt-shift-k = [ 'join-with up', 'mode main' ]
 alt-shift-l = [ 'join-with right', 'mode main' ]
 
-# --- Media controls like VLC ---
-# Toggle play pause
-space     = 'exec-and-forget /usr/local/bin/nowplaying-cli togglePlayPause'
-cmd-left  = 'exec-and-forget /usr/local/bin/nowplaying-cli previous'
-cmd-right = 'exec-and-forget /usr/local/bin/nowplaying-cli next'
-up        = 'exec-and-forget /usr/local/bin/hs -c "hs.eventtap.event.newSystemKeyEvent(\"SOUND_UP\", true):post(); hs.eventtap.event.newSystemKeyEvent(\"SOUND_UP\", false):post()"'
-down      = 'exec-and-forget /usr/local/bin/hs -c "hs.eventtap.event.newSystemKeyEvent(\"SOUND_DOWN\", true):post(); hs.eventtap.event.newSystemKeyEvent(\"SOUND_DOWN\", false):post()"'
-
-
 # Move and close window. A workaround for my my callendar workspace reopening the window
 x = [ 'exec-and-forget $HOME/.config/aerospace/move-and-close-window.sh', 'mode main' ]
 
