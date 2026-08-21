@@ -40,6 +40,11 @@ if vim.g.vscode then
     vscode.action("workbench.action.closeOtherEditors")
   end, { desc = "Close Other Editors in Group" })
 
+  -- Close current editor (<leader>bd)
+  vim.keymap.set("n", "<leader>bd", function()
+    vscode.action("workbench.action.closeActiveEditor")
+  end, { desc = "Close Current Editor" })
+
   -- Close editors in other groups (<leader>wo)
   vim.keymap.set("n", "<leader>wo", function()
     vscode.action("workbench.action.closeEditorsInOtherGroups")
