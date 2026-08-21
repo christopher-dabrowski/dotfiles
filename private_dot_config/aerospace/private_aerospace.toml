@@ -208,7 +208,9 @@ alt-shift-semicolon = 'mode service'
 [mode.service.binding]
 m = 'mode media'
 
-esc       = [ 'reload-config', 'mode main' ]
+esc                    = [ 'reload-config', 'mode main' ]
+ctrl-leftSquareBracket = 'mode main'
+
 r         = [ 'flatten-workspace-tree', 'mode main' ]        # reset layout
 f         = [ 'layout floating tiling', 'mode main' ]        # Toggle between floating and tiling layout
 backspace = [ 'close-all-windows-but-current', 'mode main' ]
@@ -235,8 +237,9 @@ x = [ 'exec-and-forget $HOME/.config/aerospace/move-and-close-window.sh', 'mode 
 e = [ 'exec-and-forget open -a Finder ~/Documents', 'mode main' ]
 
 [mode.media.binding]
-esc                 = 'mode main'
-alt-shift-semicolon = 'mode service'
+esc                    = 'mode main'
+ctrl-leftSquareBracket = 'mode main'
+alt-shift-semicolon    = 'mode service'
 
 space = 'exec-and-forget /usr/local/bin/nowplaying-cli togglePlayPause'
 
