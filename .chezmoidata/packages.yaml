@@ -19,7 +19,6 @@ packages:
       - fswatch
       - fzf
       - node
-      - gemini-cli
       - gh
       - ghostscript
       - gnupg
