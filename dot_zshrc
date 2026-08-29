@@ -46,6 +46,9 @@ path+=("$HOME/.local/share/nvim/site/")
 # or TinyTeX
 # [[ -d "$HOME/Library/TinyTeX/bin/universal-darwin" ]] && path=("$HOME/Library/TinyTeX/bin/universal-darwin" $path)
 
+# Configure perl local library
+eval "$(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)"
+
 # Alias for logging in to PW laboratories server
 alias volt="ssh dabrowk1@volt.iem.pw.edu.pl"
 
