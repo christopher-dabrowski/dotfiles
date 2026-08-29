@@ -1,5 +1,6 @@
 [tools]
 lua = "5.1"
+node = "latest"
 "npm:eslint" = "latest"
 "npm:prettier" = "latest"
 "npm:yarn" = "latest"

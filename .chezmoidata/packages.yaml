@@ -18,7 +18,6 @@ packages:
       - ffmpeg
       - fswatch
       - fzf
-      - node
       - gh
       - ghostscript
       - gnupg
