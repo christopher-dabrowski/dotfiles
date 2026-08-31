@@ -6,7 +6,6 @@ packages:
       - git
       - gcc
       - azure-cli
-      - ast-grep # for Lazyvim
       - openjdk
       - btop
       - clang-format
