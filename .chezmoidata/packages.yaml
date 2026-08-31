@@ -48,7 +48,6 @@ packages:
       - nvimpager
       - luarocks
       - rust
-      - mise
     casks:
       - anki
       - arduino-ide
