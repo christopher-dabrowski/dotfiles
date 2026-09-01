@@ -1,0 +1,15 @@
+[format.rules]
+# Aligns '=' signs in key-value pairs
+key-value-equals-sign-alignment = true
+
+trailing-comment-alignment = true
+
+# Enforces spaces inside array brackets: [ 'value' ] instead of ['value']
+array-bracket-space-width = 1
+
+# Prevents the formatter from overriding your single quotes with double quotes
+# string-quote-style = "preserve"
+
+[lint.rules]
+# Disables warnings for custom logical grouping of tables and sections
+# tables-out-of-order = "disable"
