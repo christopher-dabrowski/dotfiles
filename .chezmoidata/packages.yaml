@@ -5,7 +5,6 @@ packages:
     brews:
       - git
       - gcc
-      - azure-cli
       - openjdk
       - btop
       - clang-format
@@ -30,7 +29,6 @@ packages:
       - pstree
       - sl
       - terminal-notifier
-      - tree-sitter-cli
       - wget
       - yt-dlp
       - zoxide
@@ -43,7 +41,6 @@ packages:
       - ripgrep
       - r
       - bat # cat alternative
-      - uv # python environment manager
       - nvimpager
       - luarocks
       - rust
