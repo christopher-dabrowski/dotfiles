@@ -3,6 +3,9 @@ minimum_release_age = "2d"
 
 [tools]
 azure-cli      = { version = "latest", uvx_args = "--prerelease=allow --with pip" }
+gh             = "latest"
+go             = "latest"
+imagemagick    = "latest"
 lua            = "5.1"
 node           = "latest"
 "npm:eslint"   = "latest"
