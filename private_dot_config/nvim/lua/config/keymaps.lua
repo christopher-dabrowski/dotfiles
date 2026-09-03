@@ -7,6 +7,17 @@ if _G.nvimpager then
   vim.keymap.set({ "n", "v", "x" }, "q", "<cmd>qa!<cr>", { desc = "Quit nvimpager" })
 end
 
+vim.keymap.set("n", "[B", function()
+  for _ = 1, vim.v.count1 do
+    vim.cmd("BufferLineMovePrev")
+  end
+end, { desc = "Move buffer prev" })
+vim.keymap.set("n", "]B", function()
+  for _ = 1, vim.v.count1 do
+    vim.cmd("BufferLineMoveNext")
+  end
+end, { desc = "Move buffer next" })
+
 if vim.g.vscode then
   local vscode = require("vscode")
 
@@ -88,4 +99,15 @@ if vim.g.vscode then
   vim.keymap.set("n", "<leader>ww", function()
     vscode.action("workbench.action.focusNextGroup")
   end, { desc = "Focus Next Window Group" })
+
+  vim.keymap.set("n", "[B", function()
+    for _ = 1, vim.v.count1 do
+      vim.fn.VSCodeNotify("workbench.action.moveEditorLeftInGroup")
+    end
+  end, { desc = "Move buffer left" })
+  vim.keymap.set("n", "]B", function()
+    for _ = 1, vim.v.count1 do
+      vim.fn.VSCodeNotify("workbench.action.moveEditorRightInGroup")
+    end
+  end, { desc = "Move buffer right" })
 end
