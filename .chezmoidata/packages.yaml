@@ -23,7 +23,7 @@ packages:
       - neovim
       - nmap
       - pinentry-mac
-      - pnpm
+      # - pnpm # requres a build from source on Intel, also might be a v11 where there is a newer version
       - pstree
       - sl
       # - terminal-notifier
