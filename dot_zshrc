@@ -41,11 +41,6 @@ fi
 # Add nvim site path for plugins
 path+=("$HOME/.local/share/nvim/site/")
 
-# Add MacPorts binaries
-path=("/opt/local/bin" "/opt/local/sbin" $path)
-# Add MacPorts man pages
-manpath=("/opt/local/share/man" $manpath)
-
 # LaTeX binaries (MacTeX). These are here instead of in the .zshenv file because otherwise they are overridden
 [[ -d "/Library/TeX/texbin" ]] && path=("/Library/TeX/texbin" $path)
 # or TinyTeX
