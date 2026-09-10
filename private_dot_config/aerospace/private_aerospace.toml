@@ -235,6 +235,9 @@ x = [ "exec-and-forget $HOME/.config/aerospace/move-and-close-window.sh", "mode 
 # Open Finder
 e = [ "exec-and-forget /bin/bash -c '/Users/krzysiek/.config/aerospace/open-finder.sh > /dev/null 2>&1'", "mode main" ]
 
+c = [ "exec-and-forget open -a Horo", "mode main" ]
+t = [ "exec-and-forget /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~", "mode main" ]
+
 [mode.media.binding]
 esc                    = "mode main"
 ctrl-leftSquareBracket = "mode main"
