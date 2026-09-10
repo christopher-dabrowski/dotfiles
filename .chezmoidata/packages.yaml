@@ -7,7 +7,7 @@ packages:
       - gcc
       - openjdk
       - btop
-      - clang-format
+      # - clang-format
       - cmatrix
       - cowsay
       - curl
@@ -41,7 +41,7 @@ packages:
       - bat # cat alternative
       - nvimpager
       - luarocks
-      - rust
+      # - rust
     casks:
       - anki
       - arduino-ide
