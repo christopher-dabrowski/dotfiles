@@ -89,6 +89,7 @@ packages:
       - hammerspoon
       - font-meslo-lg-nerd-font
       - karabiner-elements
+      - notunes
     mas:
       - 937984704 # Amphetamine
       - 1193539993 # Brother iPrint&Scan

@@ -4,7 +4,10 @@ config-version = 2
 
 # You can use it to add commands that run after AeroSpace startup.
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = [ "exec-and-forget open /Applications/BetterTouchTool.app" ]
+after-startup-command = [
+  "exec-and-forget open /Applications/BetterTouchTool.app",
+  "exec-and-forget open -a /Applications/noTunes.app",
+]
 
 # Start AeroSpace at login
 start-at-login = true
