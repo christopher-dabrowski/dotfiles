@@ -227,16 +227,21 @@ alt-shift-j = [ "join-with down", "mode main" ]
 alt-shift-k = [ "join-with up", "mode main" ]
 alt-shift-l = [ "join-with right", "mode main" ]
 
-j = 'exec-and-forget /usr/local/bin/hs -c "hs.eventtap.event.newSystemKeyEvent(\"BRIGHTNESS_DOWN\", true):post(); hs.eventtap.event.newSystemKeyEvent(\"BRIGHTNESS_DOWN\", false):post()"'
-k = 'exec-and-forget /usr/local/bin/hs -c "hs.eventtap.event.newSystemKeyEvent(\"BRIGHTNESS_UP\", true):post(); hs.eventtap.event.newSystemKeyEvent(\"BRIGHTNESS_UP\", false):post()"'
-h = 'exec-and-forget /usr/local/bin/hs -c "hs.eventtap.event.newSystemKeyEvent(\"ILLUMINATION_DOWN\", true):post(); hs.eventtap.event.newSystemKeyEvent(\"ILLUMINATION_DOWN\", false):post()"'
-l = 'exec-and-forget /usr/local/bin/hs -c "hs.eventtap.event.newSystemKeyEvent(\"ILLUMINATION_UP\", true):post(); hs.eventtap.event.newSystemKeyEvent(\"ILLUMINATION_UP\", false):post()"'
+j = "exec-and-forget $HOME/.config/aerospace/keyboard-events.sh brightness-down"
+k = "exec-and-forget $HOME/.config/aerospace/keyboard-events.sh brightness-up"
+h = "exec-and-forget $HOME/.config/aerospace/keyboard-events.sh illumination-down"
+l = "exec-and-forget $HOME/.config/aerospace/keyboard-events.sh illumination-up"
+
+shift-j = "exec-and-forget $HOME/.config/aerospace/keyboard-events.sh brightness-down-big"
+shift-k = "exec-and-forget $HOME/.config/aerospace/keyboard-events.sh brightness-up-big"
+shift-h = "exec-and-forget $HOME/.config/aerospace/keyboard-events.sh illumination-min"
+shift-l = "exec-and-forget $HOME/.config/aerospace/keyboard-events.sh illumination-max"
 
 # Move and close window. A workaround for my my callendar workspace reopening the window
 x = [ "exec-and-forget $HOME/.config/aerospace/move-and-close-window.sh", "mode main" ]
 
 # Open Finder
-e = [ "exec-and-forget /bin/bash -c '/Users/krzysiek/.config/aerospace/open-finder.sh > /dev/null 2>&1'", "mode main" ]
+e = [ "exec-and-forget $HOME/.config/aerospace/open-finder.sh", "mode main" ]
 
 c = [ "exec-and-forget open -a Horo", "mode main" ]
 t = [ "exec-and-forget /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~", "mode main" ]
@@ -248,19 +253,13 @@ alt-shift-semicolon    = "mode service"
 
 space = "exec-and-forget /usr/local/bin/nowplaying-cli togglePlayPause"
 
-up = 'exec-and-forget /usr/local/bin/hs -c "hs.eventtap.event.newSystemKeyEvent(\"SOUND_UP\", true):post(); hs.eventtap.event.newSystemKeyEvent(\"SOUND_UP\", false):post()"'
-k  = 'exec-and-forget /usr/local/bin/hs -c "hs.eventtap.event.newSystemKeyEvent(\"SOUND_UP\", true):post(); hs.eventtap.event.newSystemKeyEvent(\"SOUND_UP\", false):post()"'
+j       = "exec-and-forget $HOME/.config/aerospace/keyboard-events.sh volume-down"
+k       = "exec-and-forget $HOME/.config/aerospace/keyboard-events.sh volume-up"
+shift-j = "exec-and-forget $HOME/.config/aerospace/keyboard-events.sh volume-down-big"
+shift-k = "exec-and-forget $HOME/.config/aerospace/keyboard-events.sh volume-up-big"
 
-down = 'exec-and-forget /usr/local/bin/hs -c "hs.eventtap.event.newSystemKeyEvent(\"SOUND_DOWN\", true):post(); hs.eventtap.event.newSystemKeyEvent(\"SOUND_DOWN\", false):post()"'
-j    = 'exec-and-forget /usr/local/bin/hs -c "hs.eventtap.event.newSystemKeyEvent(\"SOUND_DOWN\", true):post(); hs.eventtap.event.newSystemKeyEvent(\"SOUND_DOWN\", false):post()"'
-
-cmd-left = "exec-and-forget /usr/local/bin/nowplaying-cli previous"
-left     = "exec-and-forget /usr/local/bin/nowplaying-cli previous"
-h        = "exec-and-forget /usr/local/bin/nowplaying-cli previous"
-
-cmd-right = "exec-and-forget /usr/local/bin/nowplaying-cli next"
-right     = "exec-and-forget /usr/local/bin/nowplaying-cli next"
-l         = "exec-and-forget /usr/local/bin/nowplaying-cli next"
+h = "exec-and-forget /usr/local/bin/nowplaying-cli previous"
+l = "exec-and-forget /usr/local/bin/nowplaying-cli next"
 
 # mute
 m = 'exec-and-forget /usr/local/bin/hs -c "hs.eventtap.event.newSystemKeyEvent(\"MUTE\", true):post(); hs.eventtap.event.newSystemKeyEvent(\"MUTE\", false):post()"'
