@@ -13,3 +13,4 @@ node           = "latest"
 pandoc         = "latest"
 rust = "latest"
 uv             = "latest"
+yt-dlp = { version = "latest", rename_exe = "yt-dlp" }

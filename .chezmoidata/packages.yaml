@@ -28,7 +28,6 @@ packages:
       - sl
       # - terminal-notifier
       - wget
-      - yt-dlp
       - zoxide
       - jesseduffield/lazydocker/lazydocker
       - dockutil
