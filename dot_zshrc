@@ -282,3 +282,7 @@ fi
 bindkey -v
 
 eval "$(mise activate zsh)"
+
+# General completion settings
+fpath+=('/Users/krzysiek/.local/share/zsh/site-functions')
+autoload -Uz compinit && compinit
