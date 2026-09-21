@@ -1,0 +1,10 @@
+{
+  "model": "sonnet",
+  "modelSettings": {
+    "claude-sonnet-5": {
+      "effortLevel": "medium"
+    }
+  },
+  "theme": "auto",
+  "editorMode": "vim"
+}
