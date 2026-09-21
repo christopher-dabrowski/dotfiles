@@ -5,7 +5,7 @@ packages:
     brews:
       - git
       - gcc
-      - openjdk
+      # - openjdk
       - btop
       # - clang-format
       - cmatrix
