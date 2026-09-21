@@ -188,10 +188,7 @@ fi
 
 # pnpm
 export PNPM_HOME="$HOME/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME/bin:"*) ;;
-  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
-esac
+path=("$PNPM_HOME/bin" $path)
 # pnpm end
 
 # Load Angular CLI autocompletion.
@@ -201,7 +198,7 @@ fi
 
 # LLVM tools (Homebrew)
 if [[ -n "$HOMEBREW_PREFIX" && -d "$HOMEBREW_PREFIX/opt/llvm/bin" ]]; then
-  export PATH="$HOMEBREW_PREFIX/opt/llvm/bin:$PATH"
+  path=("$HOMEBREW_PREFIX/opt/llvm/bin" $path)
 fi
 
 # ngrok shell autocomplete
@@ -210,7 +207,7 @@ if command -v ngrok &>/dev/null; then
 fi
 
 # Claude code related
-export PATH="$HOME/.local/bin:$PATH"
+path=("$HOME/.local/bin" $path)
 
 # Configure default eza flags
 alias eza="eza --git --icons"
