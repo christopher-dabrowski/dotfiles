@@ -170,19 +170,9 @@ export PNPM_HOME="$HOME/Library/pnpm"
 path=("$PNPM_HOME/bin" $path)
 # pnpm end
 
-# Load Angular CLI autocompletion.
-if command -v ng >/dev/null 2>&1; then
-  source <(ng completion script)
-fi
-
 # LLVM tools (Homebrew)
 if [[ -n "$HOMEBREW_PREFIX" && -d "$HOMEBREW_PREFIX/opt/llvm/bin" ]]; then
   path=("$HOMEBREW_PREFIX/opt/llvm/bin" $path)
-fi
-
-# ngrok shell autocomplete
-if command -v ngrok &>/dev/null; then
-  eval "$(ngrok completion)"
 fi
 
 # Claude code related
@@ -216,27 +206,6 @@ fi
 bindkey -v
 
 eval "$(mise activate zsh)"
-
-# zsh parameter completion for the dotnet CLI
-_dotnet_zsh_complete()
-{
-  local completions=("$(dotnet complete "$words")")
-
-  reply=( "${(ps:\n:)completions}" )
-}
-
-compctl -K _dotnet_zsh_complete dotnet
-
-# Autocompletions for pip3
-function _pip_completion {
-  local words cword
-  read -Ac words
-  read -cn cword
-  reply=( $( COMP_WORDS="$words[*]" \
-             COMP_CWORD=$(( cword-1 )) \
-             PIP_AUTO_COMPLETE=1 $words[1] ) )
-}
-compctl -K _pip_completion pip
 
 # Source per-topic config files (fpath additions, tool integrations, ...).
 # Must run before compinit, since some of these files extend fpath.
