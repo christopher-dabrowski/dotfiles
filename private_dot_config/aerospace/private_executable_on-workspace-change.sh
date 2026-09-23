@@ -9,12 +9,6 @@ N)
     open -a Obsidian
   fi
   ;;
-T)
-  if ! pgrep -x kitty >/dev/null 2>&1; then
-    # open -a kitty
-    kitty --single-instance -d ~ &
-  fi
-  ;;
 P)
   if ! pgrep -x Bitwarden >/dev/null 2>&1; then
     open -a Bitwarden
