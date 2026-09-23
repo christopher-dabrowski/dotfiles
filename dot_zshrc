@@ -159,17 +159,6 @@ fi
 # <<< conda initialize <<<
 
 
-export NVM_DIR="$HOME/.nvm"
-if [[ -n "$HOMEBREW_PREFIX" ]]; then
-  [[ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ]] && . "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"
-  [[ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ]] && . "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm"
-fi
-
-# pnpm
-export PNPM_HOME="$HOME/Library/pnpm"
-path=("$PNPM_HOME/bin" $path)
-# pnpm end
-
 # LLVM tools (Homebrew)
 if [[ -n "$HOMEBREW_PREFIX" && -d "$HOMEBREW_PREFIX/opt/llvm/bin" ]]; then
   path=("$HOMEBREW_PREFIX/opt/llvm/bin" $path)
@@ -178,34 +167,11 @@ fi
 # Claude code related
 path=("$HOME/.local/bin" $path)
 
-# Configure default eza flags
-alias eza="eza --git --icons"
-alias ls="eza --icons --group-directories-first"
-alias ll="eza -l --git --icons --header --group-directories-first"
-alias la="eza -la --git --icons --header --group-directories-first"
-alias ltree="eza --tree"
-
-# Set up fzf key bindings and fuzzy completion
-# CTRL-t - Fuzzy find all files and subdirectories of the working directory, and output the selection to STDOUT.
-# CTRL-r - Fuzzy find command history.
-# ALT-c - Fuzzy change directory.
-# We can also complete some shell commands using fzf, by default triggered with ** (followed by TAB).
-if command -v fzf >/dev/null 2>&1; then
-  source <(fzf --zsh)
-fi
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Configure zoxide
-if command -v zoxide >/dev/null 2>&1; then
-  eval "$(zoxide init --cmd cd zsh)"
-fi
-
 # Enable vi mode on escape
 bindkey -v
-
-eval "$(mise activate zsh)"
 
 # Source per-topic config files (fpath additions, tool integrations, ...).
 # Must run before compinit, since some of these files extend fpath.
