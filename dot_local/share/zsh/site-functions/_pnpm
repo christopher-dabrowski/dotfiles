@@ -1,0 +1,8 @@
+#compdef pnpm
+# Generated from `pnpm completion zsh`, adapted to be autoloaded directly by
+# compinit (fpath) instead of the original eval/compdef-indirection form,
+# so it stays lazily loaded on first Tab press.
+
+local reply
+reply=("${(@f)$(COMP_CWORD=$((CURRENT-1)) COMP_LINE="$BUFFER" COMP_POINT="$CURSOR" SHELL=zsh pnpm completion-server -- "${words[@]}")}")
+_describe 'values' reply

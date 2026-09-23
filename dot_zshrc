@@ -195,12 +195,6 @@ alias ll="eza -l --git --icons --header --group-directories-first"
 alias la="eza -la --git --icons --header --group-directories-first"
 alias ltree="eza --tree"
 
-# The following lines have been added by Docker Desktop to enable Docker CLI completions.
-if [[ -d "$HOME/.docker/completions" ]]; then
-  fpath=("$HOME/.docker/completions" $fpath)
-fi
-# End of Docker CLI completions
-
 # Set up fzf key bindings and fuzzy completion
 # CTRL-t - Fuzzy find all files and subdirectories of the working directory, and output the selection to STDOUT.
 # CTRL-r - Fuzzy find command history.
@@ -244,6 +238,12 @@ function _pip_completion {
 }
 compctl -K _pip_completion pip
 
+# Source per-topic config files (fpath additions, tool integrations, ...).
+# Must run before compinit, since some of these files extend fpath.
+for _conf_file in "$HOME/.config/zsh/conf.d/"*.zsh(N); do
+  source "$_conf_file"
+done
+unset _conf_file
+
 # General completion settings
-fpath+=('/Users/krzysiek/.local/share/zsh/site-functions')
 autoload -Uz compinit && compinit
