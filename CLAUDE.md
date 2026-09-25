@@ -4,11 +4,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-Personal dotfiles for macOS, managed with [chezmoi](https://www.chezmoi.io/). This is the chezmoi *source directory* — files here are templates/source representations of what chezmoi applies to the user's home directory (`~`). There is no build step, test suite, or compiler; "correctness" means the chezmoi naming/templating rules are followed and the target file ends up in the right place with the right content.
+Personal dotfiles for macOS, managed with [chezmoi](https://www.chezmoi.io/). This is the chezmoi _source directory_ — files here are templates/source representations of what chezmoi applies to the user's home directory (`~`). There is no build step, test suite, or compiler; "correctness" means the chezmoi naming/templating rules are followed and the target file ends up in the right place with the right content.
 
 ## chezmoi source-file naming (read before editing/adding any file)
 
-chezmoi encodes target path, permissions, and behavior in the *source* filename. Key prefixes used in this repo:
+chezmoi encodes target path, permissions, and behavior in the _source_ filename. Key prefixes used in this repo:
 
 - `dot_foo` → applies as `~/.foo` (e.g. `dot_zshrc` → `~/.zshrc`).
 - `private_dot_foo` → applies as `~/.foo` with permissions restricted (no group/other access) — used for things like `private_dot_ssh`, `private_dot_config`.
@@ -41,7 +41,7 @@ There is no lint/test command in this repo; validate changes by rendering templa
 - `.chezmoidata/packages.yaml` — declarative list of Homebrew taps/brews/casks; edit here rather than editing the install scripts directly.
 - `private_dot_config/` — XDG config dirs, one subfolder per tool (aerospace, mise, nvim, git, kitty, lazygit, btop, thefuck, gh, tombi, karabiner...).
 - `private_dot_config/nvim/` — a [LazyVim](https://www.lazyvim.org/)-based Neovim config. Core LazyVim wiring lives in `lua/config/` (`lazy.lua`, `options.lua`, `keymaps.lua`, `autocmds.lua`); user customizations/plugin overrides live in `lua/plugins/` as one file per concern (`extend-*.lua` files extend a built-in LazyVim plugin spec, others add new plugins).
-- `private_dot_config/mise/config.toml` — [mise](https://mise.jdx.dev/) tool version manager config; language/CLI tool versions (node, go, rust, gh, etc.) belong here rather than as Homebrew formulas.
+- `private_dot_config/mise/config.toml` — [mise](https://mise.jdx.dev/) tool version manager config; language/CLI tool versions (node, go, rust, gh, etc.) belong here rather than as Homebrew formulas. Currently mise is used for some of the tools instead of Homebrew becose of the user working on Intel Mac an Hombrew no longer supports pre-built binaries for Intel Macs formulas.
 - `private_dot_config/aerospace/private_aerospace.toml` — [AeroSpace](https://github.com/nikitabobko/AeroSpace) tiling WM config, plus `private_executable_*.sh` helper scripts it shells out to for workspace-change/window-move/keyboard-event hooks.
 - `dot_zshrc`, `dot_zprofile`, `dot_zshenv`, `dot_p10k.zsh` — zsh setup (Powerlevel10k prompt, PATH management, aliases). `dot_zshrc` is guarded by OS templating in `.chezmoiignore.tmpl` for non-Windows/Windows split behavior.
 - `private_dot_ssh/` — SSH client config (private permissions).
