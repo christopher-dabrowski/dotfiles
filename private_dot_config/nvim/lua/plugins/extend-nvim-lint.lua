@@ -9,7 +9,7 @@ return {
         ["markdownlint-cli2"] = {
           args = {
             "--config",
-            XDG_CONFIG_DIR .. "/markdownlint-cli2/config.toml",
+            XDG_CONFIG_DIR .. "/markdownlint-cli2/config.yaml",
             "--",
           },
         },
