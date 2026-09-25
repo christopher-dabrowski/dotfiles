@@ -10,5 +10,7 @@ alias pip3-upgrade="pip3 list --outdated --format=freeze | cut -d = -f 1 | xargs
 alias venv-activate="source ./venv/bin/activate"
 
 chezmoi-cd() {
-    cd "$(chezmoi source-path)" || exit 1
+  cd "$(chezmoi source-path)" || exit 1
 }
+
+eval $(thefuck --alias)
