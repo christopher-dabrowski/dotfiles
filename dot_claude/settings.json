@@ -6,5 +6,12 @@
     }
   },
   "theme": "auto",
-  "editorMode": "vim"
+  "editorMode": "vim",
+  "autoCompactEnabled": true,
+  "autoContinueAtUsageLimit": false,
+  "pluginConfigs": {
+    "agents-md@builtin": {
+      "options": { "instructionFiles": "claude-md-and-agents-md" }
+    }
+  }
 }
