@@ -11,7 +11,15 @@
   "autoContinueAtUsageLimit": false,
   "pluginConfigs": {
     "agents-md@builtin": {
-      "options": { "instructionFiles": "claude-md-and-agents-md" }
+      "options": {
+        "instructionFiles": "claude-md-and-agents-md"
+      }
     }
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "ccstatusline",
+    "padding": 0,
+    "refreshInterval": 10
   }
 }
