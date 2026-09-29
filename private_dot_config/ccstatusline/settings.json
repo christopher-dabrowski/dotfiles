@@ -5,10 +5,10 @@
       {
         "id": "765ff86c-626d-44c4-aca1-efb215077047",
         "type": "current-working-dir",
+        "rawValue": true,
         "metadata": {
           "fishStyle": "true"
-        },
-        "rawValue": true
+        }
       },
       {
         "id": "1",
@@ -32,19 +32,21 @@
         "type": "context-percentage",
         "color": "yellow",
         "rawValue": true
-      }
-    ],
-    [
+      },
       {
-        "id": "116069ce-ebdd-403d-b1eb-83ce7e962a4c",
+        "id": "538a40ce-7b04-412e-9d00-1debdf2ed0e1",
+        "type": "flex-separator"
+      },
+      {
+        "id": "e1e62a9d-5604-447c-93f2-c4ee9ce6cfe7",
         "type": "weekly-usage",
         "metadata": {
           "display": "progress",
-          "invert": "false",
           "cursor": "false"
         }
       }
     ],
+    [],
     []
   ],
   "flexMode": "full",
