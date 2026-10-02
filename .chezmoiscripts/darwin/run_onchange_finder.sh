@@ -5,6 +5,9 @@ set -eufo pipefail
 # Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
 defaults write com.apple.finder QuitMenuItem -bool true
 
+# Toggle sidebar using ⌘ + b
+defaults write com.apple.finder NSUserKeyEquivalents -dict-add "Hide Sidebar" "@b" "Show Sidebar" "@b"
+
 # Finder: show hidden files by default
 # defaults write com.apple.finder AppleShowAllFiles -bool true
 
