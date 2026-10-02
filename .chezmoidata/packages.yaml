@@ -42,6 +42,7 @@ packages:
       - luarocks
       # - rust
       - imagemagick
+      - go
     casks:
       - anki
       - arduino-ide
