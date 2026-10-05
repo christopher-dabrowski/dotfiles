@@ -32,5 +32,8 @@
         "repo": "cloudflare/skills"
       }
     }
+  },
+  "env": {
+    "CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY": "1"
   }
 }
