@@ -27,6 +27,7 @@
 	format = ssh
 [fetch]
 	prune = true
+	fsckobjects = true
 [diff]
 	algorithm = histogram
 [rerere]
@@ -37,3 +38,7 @@
 	sort = -committerdate
 [log]
 	date = iso
+[transfer]
+	fsckobjects = true
+[receive]
+	fsckObjects = true
