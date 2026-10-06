@@ -27,3 +27,5 @@
 	format = ssh
 [fetch]
 	prune = true
+[diff]
+	algorithm = histogram
