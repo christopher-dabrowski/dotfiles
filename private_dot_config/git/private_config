@@ -20,7 +20,7 @@
 	gpgsign = true
 [push]
 	autoSetupRemote = true
-
+	followtags = true
 [advice]
 	detachedHead = false
 [gpg]
