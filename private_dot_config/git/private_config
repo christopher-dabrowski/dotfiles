@@ -35,3 +35,5 @@
 	conflictStyle = zdiff3
 [branch]
 	sort = -committerdate
+[log]
+	date = iso
