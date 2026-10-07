@@ -6,13 +6,14 @@ return {
       colorscheme = "tokyonight",
     },
   },
-  -- Configure color scheme to change based on background
+  -- Follow the system dark/light mode: kitty notifies Neovim of theme changes
+  -- (DEC mode 2031), Neovim updates 'background', and tokyonight reloads with
+  -- the matching style.
   {
     "folke/tokyonight.nvim",
     opts = {
-      style = "day", -- This will be overridden by LazyVim's light/dark handling
-      light_style = "day",
-      dark_style = "storm",
+      style = "storm", -- used when 'background' is dark
+      light_style = "day", -- used when 'background' is light
     },
   },
 }
