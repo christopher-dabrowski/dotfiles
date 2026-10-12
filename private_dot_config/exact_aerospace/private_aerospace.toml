@@ -36,7 +36,11 @@ default-root-container-orientation = "auto"
 # Fallback value (if you omit the key): on-focused-monitor-changed = []
 on-focused-monitor-changed = [ "move-mouse monitor-lazy-center" ]
 
-on-focus-changed = "move-mouse window-lazy-center"
+on-focus-changed = [
+  "move-mouse window-lazy-center",
+  # Keep side-by-side windows nested in an accordion visible together
+  "exec-and-forget $HOME/.config/aerospace/raise-tiled-siblings.sh",
+]
 
 exec-on-workspace-change = [ "/bin/bash", "-c", "$HOME/.config/aerospace/on-workspace-change.sh" ]
 
