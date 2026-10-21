@@ -40,7 +40,7 @@ packages:
       - bat # cat alternative
       - nvimpager
       - luarocks
-      - rust
+      # - rust
       - imagemagick
       - go
     casks:
