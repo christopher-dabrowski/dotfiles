@@ -248,7 +248,7 @@ x = [ "exec-and-forget $HOME/.config/aerospace/move-and-close-window.sh", "mode 
 e = [ "exec-and-forget $HOME/.config/aerospace/open-finder.sh", "mode main" ]
 
 c = [ "exec-and-forget open -a Horo", "mode main" ]
-t = [ "exec-and-forget /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~", "mode main" ]
+t = [ "exec-and-forget open -na /Applications/kitty.app --args --single-instance -d ~", "mode main" ]
 
 [mode.media.binding]
 esc                    = "mode main"
