@@ -17,6 +17,7 @@
       }
     }
   },
+  "language": "Polish",
   "modelSettings": {
     "claude-sonnet-5": {
       "effortLevel": "medium"
@@ -34,6 +35,10 @@
         "instructionFiles": "claude-md-and-agents-md"
       }
     }
+  },
+  "voice": {
+    "enabled": true,
+    "mode": "hold"
   },
   "theme": "auto",
   "editorMode": "vim",
@@ -72,5 +77,6 @@
       "**Org-specific CLIs**: pnpm (required package manager; CLAUDE.md explicitly forbids npm/yarn), wrangler (Cloudflare deploy), supabase CLI (local dev/migrations)",
       "**routine under <user>/ prefix**: none found"
     ]
-  }
+  },
+  "voiceEnabled": true
 }
