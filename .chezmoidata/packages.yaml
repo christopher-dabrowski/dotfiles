@@ -43,6 +43,7 @@ packages:
       # - rust
       - imagemagick
       - go
+      - transcrypt
     casks:
       - anki
       - arduino-ide
