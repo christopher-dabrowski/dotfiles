@@ -7,6 +7,9 @@ if _G.nvimpager then
   vim.keymap.set({ "n", "v", "x" }, "q", "<cmd>qa!<cr>", { desc = "Quit nvimpager" })
 end
 
+-- Cmd+S saves (needs the kitty keyboard protocol, which kitty speaks by default)
+vim.keymap.set({ "i", "x", "n", "s" }, "<D-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
+
 vim.keymap.set("n", "[B", function()
   for _ = 1, vim.v.count1 do
     vim.cmd("BufferLineMovePrev")
