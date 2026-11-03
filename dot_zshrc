@@ -1,5 +1,21 @@
 # vim: set filetype=sh:
 
+# Remind about a restart when uptime is long (macOS only, at most once a day).
+# Kept above the p10k instant prompt block, because it may print to the console.
+if [[ "$OSTYPE" == darwin* ]]; then
+  zmodload zsh/datetime
+  _uptime_stamp="${XDG_CACHE_HOME:-$HOME/.cache}/uptime-reminder"
+  _boot_time="$(sysctl -n kern.boottime)"
+  _boot_time="${${_boot_time#*sec = }%%,*}"
+  _uptime_days=$(( (EPOCHSECONDS - _boot_time) / 86400 ))
+  _uptime_recent=( $_uptime_stamp(N.mh-24) )
+  if (( _uptime_days >= 14 && ! $#_uptime_recent )); then
+    print -P "%F{yellow}Uptime: ${_uptime_days} days. Consider restarting the Mac.%f"
+    mkdir -p "${_uptime_stamp:h}" && : >| "$_uptime_stamp"
+  fi
+  unset _uptime_stamp _boot_time _uptime_days _uptime_recent
+fi
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
