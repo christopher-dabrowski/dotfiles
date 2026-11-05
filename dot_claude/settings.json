@@ -78,5 +78,6 @@
       "**routine under <user>/ prefix**: none found"
     ]
   },
-  "voiceEnabled": true
+  "voiceEnabled": true,
+  "idleCompaction": false
 }
