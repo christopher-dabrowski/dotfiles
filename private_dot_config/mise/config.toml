@@ -3,6 +3,7 @@ minimum_release_age = "2d"
 auto_update = true
 
 [tools]
+fd = "latest"
 gh             = "latest"
 java = "latest"
 lua            = "5.1"
