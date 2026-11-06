@@ -1,20 +1,23 @@
 [settings]
 minimum_release_age = "2d"
-auto_update = true
+
+[settings.self_update]
+auto           = true
+check_duration = "1d"
 
 [tools]
-fd = "latest"
-gh             = "latest"
-java = "latest"
-lua            = "5.1"
-markdownlint-cli2 = "latest"
-node           = "latest"
+fd                              = "latest"
+gh                              = "latest"
+java                            = "latest"
+lua                             = "5.1"
+markdownlint-cli2               = "latest"
+node                            = "latest"
 "npm:@przeprogramowani/10x-cli" = "latest"
-"npm:ccstatusline" = "latest"
-"npm:eslint"   = "latest"
-"npm:prettier" = "latest"
-pandoc         = "latest"
-"pipx:subliminal" = "latest"
-rust = "latest"
-uv             = "latest"
-yt-dlp = { version = "latest", rename_exe = "yt-dlp" }
+"npm:ccstatusline"              = "latest"
+"npm:eslint"                    = "latest"
+"npm:prettier"                  = "latest"
+pandoc                          = "latest"
+"pipx:subliminal"               = "latest"
+rust                            = "latest"
+uv                              = "latest"
+yt-dlp                          = { version = "latest", rename_exe = "yt-dlp" }
