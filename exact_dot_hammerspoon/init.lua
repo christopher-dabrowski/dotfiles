@@ -41,6 +41,7 @@ spoon.Swipe:start(4, function(direction, distance, id)
 end)
 
 require("wifi_audio")
+require("clamshell_sleep")
 
 -- Pause music when screen locks
 screenLockWatcher = hs.caffeinate.watcher.new(function(eventType)
