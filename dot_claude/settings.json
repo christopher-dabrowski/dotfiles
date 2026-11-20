@@ -43,6 +43,7 @@
   "theme": "auto",
   "editorMode": "vim",
   "autoCompactEnabled": true,
+  "idleCompaction": false,
   "autoContinueAtUsageLimit": false,
   "autoMode": {
     "soft_deny": [
@@ -79,5 +80,5 @@
     ]
   },
   "voiceEnabled": true,
-  "idleCompaction": false
+  "switchModelsOnFlag": false
 }
