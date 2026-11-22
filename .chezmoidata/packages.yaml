@@ -45,6 +45,7 @@ packages:
       - go
       - transcrypt
     casks:
+      - bitwarden
       - anki
       - arduino-ide
       - audacity
@@ -95,7 +96,7 @@ packages:
     mas:
       - 937984704 # Amphetamine
       - 1193539993 # Brother iPrint&Scan
-      - 1352778147 # Bitwarden
+      # - 1352778147 # Bitwarden
       - 1437226581 # Horo
       - 462058435 # Excel
       - 462062816 # PowerPoint
