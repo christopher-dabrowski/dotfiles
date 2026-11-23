@@ -18,6 +18,7 @@ node                            = "latest"
 "npm:prettier"                  = "latest"
 pandoc                          = "latest"
 "pipx:subliminal"               = "latest"
+ripgrep = "latest"
 rust                            = "latest"
 uv                              = "latest"
 yt-dlp                          = { version = "latest", rename_exe = "yt-dlp" }
