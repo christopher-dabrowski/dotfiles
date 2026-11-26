@@ -1,10 +1,12 @@
 # vim: set filetype=sh:
 
+eval "$(mise activate zsh --shims)"
+
 # Added by Toolbox App
 if [[ -d "/usr/local/bin" ]]; then
-	export PATH="$PATH:/usr/local/bin"
+  export PATH="$PATH:/usr/local/bin"
 fi
 
 if [[ -d "/opt/homebrew/bin" ]]; then
-	export PATH="$PATH:/opt/homebrew/bin"
+  export PATH="$PATH:/opt/homebrew/bin"
 fi

@@ -19,6 +19,9 @@ export XDG_CONFIG_HOME="$HOME/.config"
 [[ -d "/opt/homebrew/bin" ]] && path=("/opt/homebrew/bin" $path)
 [[ -d "/usr/local/bin" ]] && path=("/usr/local/bin" $path)
 
+# mise lives here; needed in .zprofile (before .zshrc runs) for `mise activate --shims`.
+[[ -d "$HOME/.local/bin" ]] && path=("$HOME/.local/bin" $path)
+
 # Optional tools
 [[ -d "/usr/local/anaconda3/bin" ]] && path+=("/usr/local/anaconda3/bin")
 
